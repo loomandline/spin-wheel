@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#142b49">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>A little extra | Loom &amp; Line</title>
+    <meta name="description" content="A little something from Loom &amp; Line. Give the wheel a spin and discover a private offer.">
+    <link rel="icon" href="assets/mark-navy-solid.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="styles.css">
+    <script src="prices.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main id="top">
+      <section class="experience" id="spin" aria-labelledby="page-title">
+        <header class="site-header">
+          <a class="brand" href="https://loomandline.in" aria-label="Loom and Line shop" target="_blank" rel="noopener noreferrer">
+            <img src="assets/logo-white-transparent.png" alt="Loom &amp; Line" width="156" height="72">
+          </a>
+          <a class="header-link" href="https://loomandline.in" target="_blank" rel="noopener noreferrer">Shop loomandline.in <span aria-hidden="true">↗</span></a>
+        </header>
+        <div class="intro">
+          <p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true">✳</span> A LOOM &amp; LINE MOMENT</p>
+          <h1 id="page-title">A little extra, <em>just for you.</em></h1>
+          <p class="intro-copy">Give the wheel a spin and discover your Loom &amp; Line treat.</p>
+        </div>
+
+        <div class="wheel-panel" aria-label="Spin the Loom and Line offer wheel">
+          <div class="wheel-stage">
+            <div class="wheel-halo" aria-hidden="true"></div>
+            <div class="wheel-frame">
+              <span class="wheel-pointer" aria-hidden="true"></span>
+              <canvas id="wheel" width="640" height="640" role="img" aria-label="Wheel with six possible offers">Spin the wheel to reveal your offer.</canvas>
+              <button class="wheel-center" id="spin-button" type="button" aria-label="Give the wheel a spin" disabled>
+                <span class="center-star" aria-hidden="true">✳</span>
+                <span class="center-wordmark" aria-hidden="true">L<span>&amp;</span>L</span>
+                <span class="center-caption button-label">Spin</span>
+              </button>
+            </div>
+          </div>
+          <div class="wheel-controls">
+            <p class="wheel-status" id="wheel-status" aria-live="polite">Your moment is waiting.</p>
+          </div>
+          <a class="shop-note" href="https://loomandline.in" target="_blank" rel="noopener noreferrer">Find your next favourite at loomandline.in <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="result-dialog" id="result-dialog" aria-labelledby="result-title">
+      <button class="dialog-close" id="close-dialog" type="button" aria-label="Close offer">×</button>
+      <p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true">✳</span> A LITTLE SOMETHING, JUST FOR YOU</p>
+      <h2 id="result-title">Lovely choice.</h2>
+      <p class="result-prize" id="result-prize"></p>
+      <p class="result-copy">A little extra for the pieces you’ll keep close.</p>
+      <div class="coupon-row"><span id="coupon-code"></span><button id="copy-code" type="button">Copy code</button></div>
+      <p class="copy-status" id="copy-status" aria-live="polite"></p>
+      <a class="continue-button" href="https://loomandline.in" target="_blank" rel="noopener noreferrer">Shop Loom &amp; Line <span aria-hidden="true">↗</span></a>
+      <p class="dialog-disclaimer">Add the code at checkout. One use per customer; other exclusions may apply.</p>
+    </dialog>
+    <div class="dialog-backdrop" aria-hidden="true"></div>
+  </body>
+</html>
